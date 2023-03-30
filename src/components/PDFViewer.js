@@ -26,7 +26,14 @@ export default function PDFViewer() {
     }
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (pdfFile !== null) {
+      setViewPdf(pdfFile);
+    } else {
+      setViewPdf(null);
+    }
+  };
   return (
     <div className="container">
       <form onClick={handleSubmit}>
